@@ -15,8 +15,8 @@ button {
     font-weight: normal;
     font-style: normal;
 }
-.logo {
-    max-width: 10px;
+.logo img{
+    max-width: 10vw;
     height:auto;
 }
 
@@ -25,10 +25,21 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
     align-items: center;
+    color: gray;
+    background-color: #fff0f0;
 }
 
+.right-nav {
+    display: flex;
+    gap: 20px;
+
+}
+
+.right-nav i {
+    font-size: 1.5rem;
+    color: grey;
+}
 nav li {
     list-style-type: none;
 
@@ -43,5 +54,6 @@ nav ul {
 nav a {
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: grey;
 }
