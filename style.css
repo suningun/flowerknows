@@ -1,0 +1,47 @@
+* {
+    color: #e8989a;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    background-color: white;
+}
+
+.dm-sans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.logo {
+    max-width: 10px;
+    height:auto;
+}
+
+.nav-bar {
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
