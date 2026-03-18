@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowerknows</title>
+
+    <!-- Primary SEO -->
+    <title>FlowerKnows® Official Site | Luxury Makeup & Beauty Products</title>
+    <meta name="description" content="Shop FlowerKnows for premium makeup, lipsticks, and beauty products inspired by fantasy and elegance. Discover high-quality cosmetics with unique packaging.">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://flowerknows.co/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FlowerKnows | Luxury Makeup & Aesthetic Beauty">
+    <meta property="og:description" content="Explore FlowerKnows' unique and artistic makeup collections.">
+    <meta property="og:image" content="/src/banner.jpg">
+    <meta property="og:url" content="https://flowerknows.co/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FlowerKnows Beauty | Luxury Makeup">
+    <meta name="twitter:description" content="Shop aesthetic and high-quality makeup from FlowerKnows.">
+    <meta name="twitter:image" content="/src/banner.jpg">
+
+    <!-- Favicon -->
     <link rel="icon" href="/src/favicon.ico" type="image/x-icon">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lora&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-
-    <div class="nav-bar">
-        <div class="logo">
-            <img src="/src/logo.avif">
-        </div>
-
-    <nav>
-        <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#">CATEGORIES</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-nav">
-        <a><i class="fas fa-search"></i></a>
-        <a><i class="fas fa-user"></i></a>
-        <a><i class="fas fa-shopping-bag"></i></a>
-    </div>
-
-    </div>
-
     <header>
-    </header>
-            <div id="product-list" class="product-grid"></div>
-    <main>
-        <article>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="/src/logo.avif" alt="FlowerKnows Logo">
+            </div>
 
-        </article>
+            <nav>
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#categories">CATEGORIES</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+
+            <div class="right-nav">
+                <a><i class="fas fa-search"></i></a>
+                <a><i class="fas fa-user"></i></a>
+                <a><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h1>Welcome to FlowerKnows</h1>
+            </div>
+
+        </section>
+
+        <section id="about" class="section-hidden">
+            <h2>About Us</h2>
+            <p>Luxury makeup inspired by fantasy and elegance.</p>
+        </section>
+
+        <section id="categories" class="section-hidden">
+            <div id="product-list" class="product-grid"></div>
+        </section>
+
+        <section id="contact" class="section-hidden">
+
+        </section>
+    
     </main>
 
-<script src="javascript/products.js"></script>
+    <footer>
+
+    </footer>
+
+<script type="module" src="main.js"></script>
+
 </body>
 </html>

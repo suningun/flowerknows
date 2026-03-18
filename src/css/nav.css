@@ -1,0 +1,36 @@
+.nav-bar {
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
+    background-color: #fff0f0;
+}
+.right-nav {
+    display: flex;
+    gap: 30px;
+
+}
+
+.right-nav i {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: grey;
+}
+.logo img{
+    max-width: 10vw;
+    height:auto;
+}
