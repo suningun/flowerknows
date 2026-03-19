@@ -25,8 +25,8 @@ products.forEach(product => {
             <img src="${product.img}" alt="${product.name}">
         </div>
         <h3>${product.name}</h3>
-        <p class="price">$${product.price}</p>
-        <p class="stock">Stock: ${product.stock}</p>
+        <p class="price">$ ${product.price.toFixed(2)}</p>
+        <button class="button" data-id="${product.id}">Add to Cart</button>
     `;
 
     container.appendChild(card);
