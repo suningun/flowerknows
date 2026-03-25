@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="image-wrapper">
                     <img src="${product.img}" alt="${product.name}">
                 </div>
-                <h3>${product.name}</h3>
-                <p class="price">$${product.price.toFixed(2)}</p>
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-price">$${product.price.toFixed(2)}</p>
                 <button class="button" data-id="${product.id}">Add to Cart</button>
             `;
             container.appendChild(card);
