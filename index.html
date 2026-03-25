@@ -51,8 +51,8 @@
             </div>
 
             <nav>
-                <a href="#home">home</a>
-                <a href="#about">about</a>
+                <a href="#home" id="home-link">home</a>
+                <a href="#about" id="about-link">about</a>
                 <a href="#categories">category</a>
                 <a href="#contact">contact</a>
             </nav>
@@ -79,9 +79,17 @@
         </section>
 
         <section id="categories" class="section-hidden">
+            <div class="category-bar">
+                <button id="cat-all" class="active">All</button>
+                <button id="cat-face">Face</button>
+                <button id="cat-eyes">Eyes</button>
+                <button id="cat-lips">Lips</button>
+                <button id="cat-accessories">Accessories & Applicators</button>
+            </div>
+            <h3 id="category-title">All</h3>
             <div id="product-list" class="product-grid"></div>
         </section>
-
+        
         <section id="contact" class="section-hidden">
 
         </section>

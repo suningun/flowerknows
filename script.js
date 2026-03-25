@@ -39,33 +39,85 @@ let products = [
     { id: 34, img: "/src/products/ID34.webp", name: "Shell's Jewel Hand Mirror", price: 25, category: "Accessories & Applicators" },
 ];
 
-let container = document.getElementById("product-list");
+// let container = document.getElementById("product-list");
 
-products.forEach(product => {
-    let category = Array.isArray(product.category) 
-        ? product.category.join(", ") 
-        : product.category;
+// products.forEach(product => {
+//     let category = Array.isArray(product.category) 
+//         ? product.category.join(", ") 
+//         : product.category;
 
-    // Check if product is a best seller
-    let isBestSeller = Array.isArray(product.category) && product.category.includes("Best Sellers");
+//     // Check if product is a best seller
+//     let isBestSeller = Array.isArray(product.category) && product.category.includes("Best Sellers");
 
-    let card = document.createElement("div");
-    card.classList.add("product-card");
+//     let card = document.createElement("div");
+//     card.classList.add("product-card");
 
-    card.innerHTML = `
-        <div class="image-wrapper">
-            ${isBestSeller ? '<span class="badge">Best Seller</span>' : ''}
-            <img src="${product.img}" alt="${product.name}">
-        </div>
-        <h3>${product.name}</h3>
-        <p class="price">$ ${product.price.toFixed(2)}</p>
-        <button class="button" data-id="${product.id}">Add to Cart</button>
-    `;
+//     card.innerHTML = `
+//         <div class="image-wrapper">
+//             ${isBestSeller ? '<span class="badge">Best Seller</span>' : ''}
+//             <img src="${product.img}" alt="${product.name}">
+//         </div>
+//         <h3>${product.name}</h3>
+//         <p class="price">$ ${product.price.toFixed(2)}</p>
+//         <button class="button" data-id="${product.id}">Add to Cart</button>
+//     `;
 
-    container.appendChild(card);
+//     container.appendChild(card);
+// });
+
+const categoryMap = {
+    'cat-all': 'All',
+    'cat-face': 'Face',
+    'cat-eyes': 'Eyes',
+    'cat-lips': 'Lips',
+    'cat-accessories': 'Accessories & Applicators'
+};
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('.category-bar button');
+    const container = document.getElementById('product-list');
+    const categoryTitle = document.getElementById('category-title');
+
+    function renderProducts(filteredProducts, categoryName) {
+        categoryTitle.textContent = categoryName;
+
+        container.innerHTML = '';
+        filteredProducts.forEach(product => {
+            const card = document.createElement('div');
+            card.classList.add('product-card');
+            card.innerHTML = `
+                <div class="image-wrapper">
+                    <img src="${product.img}" alt="${product.name}">
+                </div>
+                <h3>${product.name}</h3>
+                <p class="price">$${product.price.toFixed(2)}</p>
+                <button class="button" data-id="${product.id}">Add to Cart</button>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+
+            // Remove 'active' from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Get category name
+            const selectedCategory = categoryMap[button.id];
+
+            // Filter products
+            const filteredProducts = selectedCategory === 'All'
+                ? products
+                : products.filter(p => p.category === selectedCategory);
+
+            renderProducts(filteredProducts, selectedCategory);
+        });
+    });
+
+    // Initial load: show all products
+    renderProducts(products, 'All');
 });
-
-
 
 //Handle LINKKKK
 
@@ -89,9 +141,14 @@ links.forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href').replace('#','');
 
+        // Save current section
         localStorage.setItem('currentSection', targetId);
 
+        // Show the section
         showSection(targetId);
+
+        // Update URL hash without scrolling again
+        history.replaceState(null, null, `#${targetId}`);
     });
 });
 
@@ -99,6 +156,9 @@ links.forEach(link => {
 window.addEventListener('DOMContentLoaded', () => {
     const savedSection = localStorage.getItem('currentSection') || 'home';
     showSection(savedSection);
+
+    // Update hash on page load
+    history.replaceState(null, null, `#${savedSection}`);
 });
 
 

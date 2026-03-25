@@ -4,7 +4,17 @@
     margin: 0;
     padding: 0;
 }
-
+section {
+    padding: 100px 20px;
+}
+/* Root */
+:root {
+    --primary-color:  #e8989a;
+    --secondary-color: ;
+    
+    --text-color: #212529;   /* A dark color for text */
+    --font-stack: sans-serif; /* A global font family */
+}
 
 .section-hidden {
     display: none;
@@ -181,6 +191,7 @@ nav a {
 }
 
 .product-card {
+    height: 100%;
     font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
     border: 1px solid #eee;
     border-radius: 12px;
@@ -205,8 +216,11 @@ nav a {
 .product-card h3 {
     color:#505050;
     font-weight: normal;
+    min-height: 3em; 
+    margin-bottom: 10px;
     font-size: 14px;
     margin: 10px 0;
+    line-height: 20px;
 }
 .product-card h3:hover {
     text-decoration: underline #e8989a 1px;
@@ -216,7 +230,7 @@ nav a {
 
 .price {
     color:#505050;
-        margin: 10px 0;
+        margin: 10px;
 }
 
 
