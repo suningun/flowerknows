@@ -80,20 +80,27 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderProducts(filteredProducts, categoryName) {
         categoryTitle.textContent = categoryName;
 
-        container.innerHTML = '';
-        filteredProducts.forEach(product => {
-            const card = document.createElement('div');
-            card.classList.add('product-card');
-            card.innerHTML = `
-                <div class="image-wrapper">
-                    <img src="${product.img}" alt="${product.name}">
-                </div>
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-price">$${product.price.toFixed(2)}</p>
-                <button class="button" data-id="${product.id}">Add to Cart</button>
-            `;
-            container.appendChild(card);
-        });
+            container.innerHTML = '';
+
+            // Loop through filtered products
+            filteredProducts.forEach(product => {
+                // Create the card wrapper
+                const card = document.createElement('div');
+                card.classList.add('card'); // base card class
+
+                // Add inner HTML using BEM classes
+                card.innerHTML = `
+                    <div class="card-img-wrapper">
+                        <img src="${product.img}" alt="${product.name}" class="card__img">
+                    </div>
+                    <h3 class="card-title underline">${product.name}</h3>
+                    <p class="card-price">$${product.price.toFixed(2)}</p>
+                    <button class="btn btn-primary" data-id="${product.id}">Add to Cart</button>
+                `;
+
+                // Append card to container
+                container.appendChild(card);
+            });
     }
 
     categoryButtons.forEach(button => {
