@@ -39,31 +39,7 @@ let products = [
     { id: 34, img: "/src/products/ID34.webp", name: "Shell's Jewel Hand Mirror", price: 25, category: "Accessories & Applicators" },
 ];
 
-// let container = document.getElementById("product-list");
 
-// products.forEach(product => {
-//     let category = Array.isArray(product.category) 
-//         ? product.category.join(", ") 
-//         : product.category;
-
-//     // Check if product is a best seller
-//     let isBestSeller = Array.isArray(product.category) && product.category.includes("Best Sellers");
-
-//     let card = document.createElement("div");
-//     card.classList.add("product-card");
-
-//     card.innerHTML = `
-//         <div class="image-wrapper">
-//             ${isBestSeller ? '<span class="badge">Best Seller</span>' : ''}
-//             <img src="${product.img}" alt="${product.name}">
-//         </div>
-//         <h3>${product.name}</h3>
-//         <p class="price">$ ${product.price.toFixed(2)}</p>
-//         <button class="button" data-id="${product.id}">Add to Cart</button>
-//     `;
-
-//     container.appendChild(card);
-// });
 
 const categoryMap = {
     'cat-all': 'All',
