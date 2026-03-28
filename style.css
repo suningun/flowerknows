@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--text-color);
 }
 html {
     scroll-behavior: smooth;
@@ -14,6 +13,7 @@ body {
     margin: 0;
     letter-spacing: 0.06rem;
     font-family: var(--primary-font);
+    color: var(--text-color);
 }
 
 :root {
@@ -21,6 +21,7 @@ body {
     --primary-color: #e8989a;
     --secondary-color: #fff;
     --text-color: #505050;
+    --secondary-background-color: #fff0f0;
 
 
     /* ===== Fonts ===== */
@@ -62,7 +63,7 @@ body {
     --card-padding: 20px;
     --card-radius: 16px;
     --navbar-height: 100px; /* Default */
-    --navbar-color: #fff0f0;
+    --navbar-color: var(--secondary-background-color);
     --border-color: #eee;
 
     --main-padding-top: var(--navbar-height);
@@ -80,6 +81,8 @@ body {
     gap: var(--space-lg); /* consistent spacing */
 }
 /* Grid column variants */
+.grid-6 { grid-template-columns: repeat(6, 1fr); }
+.grid-5 { grid-template-columns: repeat(5, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -263,7 +266,7 @@ nav a:hover {
         top: var(--navbar-height);
         left: 0;
         width: 100%;
-        background: var(--secondary-color);
+        background: var(--secondary-background-color);
         padding: var(--space-lg);
         text-align: center;
         z-index: 999;
@@ -288,4 +291,22 @@ nav a:hover {
 }
 main {
     padding-top: var(--main-padding-top);
+}
+/* Tablet */
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .grid-4 {
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+@media (max-width: 550px) {
+    .grid-4 {
+        grid-template-columns: 1fr ;
+    }
 }
