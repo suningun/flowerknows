@@ -23,7 +23,6 @@ body {
     --text-color: #505050;
     --secondary-background-color: #fff0f0;
 
-
     /* ===== Fonts ===== */
     --primary-font: Palatino, "Palatino Linotype", "Book Antiqua", serif;
     --secondary-font: "DM Sans", sans-serif;
@@ -68,6 +67,7 @@ body {
 
     --main-padding-top: var(--navbar-height);
     --margin-top: var(--navbar-height);
+
     
 }
 
@@ -312,3 +312,4 @@ main {
         grid-template-columns: 1fr ;
     }
 }
+
