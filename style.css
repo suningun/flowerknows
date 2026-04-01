@@ -8,6 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 body {
     min-height: 100%;
     margin: 0;
@@ -75,6 +76,7 @@ body {
 .text-center { text-align: center; }
 .uppercase { text-transform: uppercase; }
 
+
 /* Base grid container for products */
 .grid {
     display: grid;
@@ -115,12 +117,19 @@ section {
     text-transform: uppercase;
     letter-spacing: var(--space-xs);
     cursor: pointer;
+    text-decoration-line: none;
+    font-family: var(--secondary-font);
 }
 
-/* Variants */
+
 .btn-primary {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    
+}
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /* Hover state */
