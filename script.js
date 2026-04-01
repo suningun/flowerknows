@@ -145,3 +145,30 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slideshow");
+
+    function showSlide(n) {
+        if (n >= slides.length) slideIndex = 0;
+        if (n < 0) slideIndex = slides.length - 1;
+
+        slides.forEach(slide => {
+            slide.style.display = "none";
+        });
+
+        slides[slideIndex].style.display = "block";
+    }
+
+    window.plusDivs = function(n) {
+        slideIndex += n;
+        showSlide(slideIndex);
+    };
+
+    showSlide(slideIndex);
+
+    setInterval(() => {
+        slideIndex++;
+        showSlide(slideIndex);
+    }, 5000);
+});

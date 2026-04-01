@@ -53,7 +53,7 @@
             <nav>
                 <a href="#home" id="home-link">home</a>
                 <a href="#about" id="about-link">about</a>
-                <a href="#categories">category</a>
+                <a href="#categories" id="categories-link">category</a>
                 <a href="#contact">contact</a>
             </nav>
 
@@ -68,15 +68,34 @@
     <main>
         <section id="home">
             <div class="hero-section">
-                <div class="slideshow"></div>
-                <a href="/collections/sale" class="btn btn-secondary" aria-label="View all products in the Sale collection">
-          Shop Now
-        </a>
-                    <img src="/src/additional-images/hero1.webp">
-                    <h2>A Soft Easter Glow</h2>
-                    <p>Discover your favorites with Easter special offers</p>
+                <div class="slideshow">
+                    <img src="/src/additional-images/hero1.webp" class="slideshow-img" alt="Easter collection banner">
+                    <div class="slide-text grid">
+                        <h1>A Soft Easter Glow</h1>
+                        <p>Discover your favorites with Easter special offers</p>
+                        <a class="btn btn-secondary" aria-label="View all products in the Sale collection">Coming Soon</a>
+                    </div>
                 </div>
-                <h1>Welcome to FlowerKnows</h1>
+
+                <div class="slideshow">
+                    <img src="/src/additional-images/hero2.webp" class="slideshow-img" alt="Easter collection banner">
+                    <div class="slide-text grid">
+                        <h1>Into a Bunny Dream</h1>
+                        <p>Discover your favorites with Bunny Dream</p>
+                        <a href="#categories" class="btn btn-secondary" aria-label="View all products in the Sale collection">Shop Now</a>
+                    </div>
+                </div>
+
+                <div class="slideshow">
+                    <img src="/src/additional-images/hero3.webp" class="slideshow-img" alt="Easter collection banner">
+                    <div class="slide-text grid">
+                        <h1>Make Every Gift a FairyTale</h1>
+                        <p>Discover your favorites with Bunny Dream</p>
+                        <a href="#categories" class="btn btn-secondary" aria-label="View all products in the Sale collection">Shop Now</a>
+                    </div>
+                </div>
+                <button class="slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="slide-button-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
 
             <div class="buy-collection">

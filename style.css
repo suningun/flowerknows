@@ -35,6 +35,7 @@ body {
     --font-md: 16px;
     --font-lg: 24px;
     --font-xl: 32px;
+    --font-xxl: 50px;
 
     /* ===== Spacing ===== */
     --space-xs: 3px;
@@ -77,10 +78,75 @@ body {
 .uppercase { text-transform: uppercase; }
 
 
+
+.slideshow-img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    opacity: 90%;
+
+
+}
+.slide-button-left,
+.slide-button-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+.slideshow:first-child {
+    display: block;
+}
+
+.slide-button-left {
+    left: 20px;
+}
+
+.slide-button-right {
+    right: 20px;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.slideshow {
+    position: relative;
+    display: none;
+    animation: fade 4s ease-in-out;
+}
+
+
+@keyframes fade {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+.slide-text {
+    position: absolute;
+    top: 63%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}
+.slide-text h1 {
+    font-size: var(--font-xxl);
+}
+
+
+.slide-text a {
+    margin-top: 25px;
+    width: fit-content;
+}
+
 /* Base grid container for products */
 .grid {
     display: grid;
-    gap: var(--space-lg); /* consistent spacing */
+    gap: var(--space-md); /* consistent spacing */
 }
 /* Grid column variants */
 .grid-6 { grid-template-columns: repeat(6, 1fr); }
@@ -97,6 +163,13 @@ section {
     min-height: 100vh;
     scroll-margin-top: var(--margin-top);
 }
+
+#home {
+    padding: 0;
+    scroll-margin-top: none;
+}
+
+
 .section-hidden { display: none; }
 
 /* ================= Typography ================= */
@@ -210,8 +283,8 @@ header { position: relative; }
 }
 /* Logo */
 .logo img {
-    max-width: 8vw;
-    height: auto;
+    width: 120px;
+    max-width: 100%;
 }
 
 /* Navigation links */
