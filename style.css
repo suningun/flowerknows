@@ -141,7 +141,6 @@ main {
     font-size: var(--font-xxl);
 }
 
-
 .slide-text a {
     margin-top: 25px;
     width: fit-content;
@@ -173,7 +172,6 @@ section {
     scroll-margin-top: none;
 }
 
-
 .section-hidden { display: none; }
 
 /* ================= Typography ================= */
@@ -183,7 +181,6 @@ section {
     font-weight: normal;
     font-style: normal;
 }
-
 
 /* Base Button */
 .btn {
@@ -198,12 +195,12 @@ section {
     font-family: var(--secondary-font);
 }
 
-
 .btn-primary {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     
 }
+
 .btn-secondary {
     background-color: var(--secondary-color);
     color: var(--text-color);
