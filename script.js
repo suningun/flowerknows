@@ -55,28 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderProducts(filteredProducts, categoryName) {
         categoryTitle.textContent = categoryName;
+        container.innerHTML = '';
 
-            container.innerHTML = '';
+        filteredProducts.forEach(product => {
+            const card = document.createElement('div');
+            card.classList.add('product-card'); // Updated Name
 
-            // Loop through filtered products
-            filteredProducts.forEach(product => {
-                // Create the card wrapper
-                const card = document.createElement('div');
-                card.classList.add('card'); // base card class
+            card.innerHTML = `
+                <div class="image-box"> 
+                    <img src="${product.img}" alt="${product.name}">
+                </div>
+                <h3 class="product-title underline">${product.name}</h3>
+                <p class="product-price">$${product.price.toFixed(2)}</p>
+                <button class="btn btn-primary" data-id="${product.id}">Add to Cart</button>
+            `;
 
-                // Add inner HTML using BEM classes
-                card.innerHTML = `
-                    <div class="card-img-wrapper">
-                        <img src="${product.img}" alt="${product.name}" class="card__img">
-                    </div>
-                    <h3 class="card-title underline">${product.name}</h3>
-                    <p class="card-price">$${product.price.toFixed(2)}</p>
-                    <button class="btn btn-primary" data-id="${product.id}">Add to Cart</button>
-                `;
-
-                // Append card to container
-                container.appendChild(card);
-            });
+            container.appendChild(card);
+        });
     }
 
     categoryButtons.forEach(button => {
@@ -190,3 +185,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 });
+
