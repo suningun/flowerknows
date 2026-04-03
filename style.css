@@ -76,6 +76,25 @@ main {
 }
 
 /* ================= REUSABLE BLOCKS ================= */
+.underline:hover { text-decoration: underline var(--primary-color) 0.5px; text-underline-offset: 5px; }
+.text-center { text-align: center; }
+.uppercase { text-transform: uppercase; }
+.flex { display:flex; gap: var(--space-lg); }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.section-padding { padding: var(--space-xl) 0; }
+.rounded-img { border-radius: var(--radius-md); width: 100%; display: block; }
+.shadow { box-shadow: var(--shadow-md);}
+
+/* --- Layout Components --- */
+.split-layout { display: flex; align-items: center; gap: var(--space-xl); }
+.media-column, .text-column { flex: 1; }
+.highlight-block { background-color: var(--secondary-background-color); }
 
 /* Base grid container for products */
 .grid {
@@ -95,18 +114,21 @@ main {
 section {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* Ensures it feels like a full page */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    scroll-margin-top: var(--navbar-height);
+    
+    /* FIX: Match this exactly to your --navbar-height variable */
+    scroll-margin-top: var(--navbar-height); 
+    
+    /* Ensure padding-top is also present so content isn't under the nav */
+
 }
 .section-title {
     color: var(--text-color);
     font-size: var(--font-xl);
 }
 .section-hidden { display: none; }
-.section-wrapper { margin: 0 auto; width: 100%; padding: 0 var(--space-lg); /* Side padding only */ }
-.subsection { padding: var(--space-xl) 0; width: 100%; }
 /* Typography */
 .dm-sans {
     font-family: "DM Sans", sans-serif;
@@ -134,12 +156,7 @@ section {
 .btn:hover { opacity: 0.75; }
 
 
-/* ================= UTILITIES ================= */
-.underline:hover { text-decoration: underline var(--primary-color) 0.5px; text-underline-offset: 5px; }
-.text-center { text-align: center; }
-.uppercase { text-transform: uppercase; }
-.flex { display:flex; gap: var(--space-lg); }
-.flex-col { display: flex; flex-direction: column;}
+
 
 /* ================= Header & Navigation ================= */
 header { position: relative; }
@@ -212,7 +229,14 @@ nav a:hover {
 
 /* ================= HOME PAGE ================= */
 /* HERO SECTION */
-.hero-section { position: relative; }
+.hero-section { position: relative;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height)); 
+    overflow: hidden;
+}
+#home {
+    padding-top: 0; /* Remove padding here so the slide can touch the top of the screen */
+}
 .slideshow { position: relative; display: none; animation: fade 4s ease-in-out; }
 .slideshow-img { max-width: 100%; height: auto; object-fit: cover; opacity: 90%; }
 .slide-button-left,
@@ -345,53 +369,9 @@ nav a:hover {
     }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-
-/* --- Reusable Utility Classes --- */
-.section-padding {
-    padding: var(--space-xl) 0;
-}
-
-.rounded-img {
-    border-radius: var(--radius-md);
-    width: 100%;
-    display: block;
-}
-
-.shadow {
-    box-shadow: var(--shadow-md);
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* --- Layout Components --- */
-.split-layout {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xl);
-}
-
-.media-column, .text-column {
-    flex: 1;
-}
-
-.highlight-block {
-    background-color: var(--secondary-background-color);
-}
 
 /* --- Feature Items --- */
-.feature-item {
-    margin-bottom: var(--space-lg);
-}
-
+.feature-item { margin-bottom: var(--space-lg); }
 .feature-item h4 {
     color: var(--primary-color);
     text-transform: uppercase;
@@ -400,32 +380,11 @@ nav a:hover {
 }
 
 /* --- Content Cards --- */
-.content-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.content-card:hover {
-    transform: translateY(-10px);
-}
-
-.card-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: var(--space-md);
-}
-
-.card-body h4 {
-    margin-bottom: var(--space-sm);
-    font-size: var(--font-md);
-}
+.content-card { background: var(--card-bg); border-radius: var(--radius-md); overflow: hidden; text-align: center; transition: transform 0.3s ease; }
+.content-card:hover { transform: translateY(-10px); }
+.card-image img { width: 100%; height: 300px; object-fit: cover; }
+.card-body { padding: var(--space-md); }
+.card-body h4 { margin-bottom: var(--space-sm); font-size: var(--font-md); }
 
 @media (max-width: 768px) {
     .split-layout {
