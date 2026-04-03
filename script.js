@@ -172,3 +172,21 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(slideIndex);
     }, 5000);
 });
+
+// About Us
+document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+            }
+        });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
+});
