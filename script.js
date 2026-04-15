@@ -40,6 +40,106 @@ let products = [
 ];
 
 
+const createHeader = () => {
+    const header = document.getElementById('main-header');
+
+    header.innerHTML = `
+        <div class="nav-bar">
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="/src/logo.avif" alt="FlowerKnows Logo">
+            </div>
+
+            <nav>
+                <a href="/">home</a>
+                <a href="about.html">about</a>
+                <a href="categories.html">category</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="right-nav">
+                <a><i class="fas fa-search"></i></a>
+                <a><i class="fas fa-user"></i></a>
+                <a><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    `;
+};
+createHeader();
+
+const createFooter = () => {
+    const footer = document.getElementById('main-footer');
+
+    footer.innerHTML = `
+
+        <ul class="footer-page">
+            <li>
+                <img src="/src/additional-images/live_your_fairytale.webp" alt="live with fary Tale">
+            </li>
+        </ul>
+
+        <ul class="footer-top">
+            <li class="footer-column">
+                <h3>ABOUT FLOWER KNOWS</h3>
+                <ul>
+                    <li><a href="#">Loyalty Program</a></li>
+                    <li><a href="#">Brand Story</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Become a Retailer</a></li>
+                </ul>
+            </li>
+
+            <li class="footer-column">
+                <h3>CUSTOMER CARE</h3>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Refund & Return Policy</a></li>
+                    <li><a href="#">Promotion Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </li>
+
+            <li class="footer-column">
+                <h3>CUSTOMER SERVICE</h3>
+                <ul>
+                    <li><a href="#">Student Discount</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Submit a Fake</a></li>
+                </ul>
+            </li>
+
+            <li class="footer-column">
+                <h3>FOLLOW US</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="footer-bottom">
+            <li>
+                <p>© 2026, Flower Knows . All rights reserved.</p>
+            </li>
+        </ul>
+
+
+    `;
+};
+createFooter();
+
+
 
 const categoryMap = {
     'cat-all': 'All',
@@ -62,12 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('product-card'); // Updated Name
 
             card.innerHTML = `
-                <div class="image-box"> 
+
                     <img src="${product.img}" alt="${product.name}">
-                </div>
                 <h3 class="product-title underline">${product.name}</h3>
                 <p class="product-price">$${product.price.toFixed(2)}</p>
-                <button class="btn btn-primary" data-id="${product.id}">Add to Cart</button>
+                <button class="btn btn-primary add-to-cart" data-id="${product.id}">Add to Cart</button>
             `;
 
             container.appendChild(card);
@@ -97,47 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts(products, 'All');
 });
 
-//Handle LINKKKK
-
-const links = document.querySelectorAll('nav a');
-const sections = document.querySelectorAll('main section');
-
-function showSection(targetId) {
-    sections.forEach(section => {
-        if (section.id === targetId) {
-            section.classList.remove('section-hidden'); // show section
-            section.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            section.classList.add('section-hidden'); // hide others
-        }
-    });
-}
-
-// Handle nav clicks
-links.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').replace('#','');
-
-        // Save current section
-        localStorage.setItem('currentSection', targetId);
-
-        // Show the section
-        showSection(targetId);
-
-        // Update URL hash without scrolling again
-        history.replaceState(null, null, `#${targetId}`);
-    });
-});
-
-// Show last saved section on refresh
-window.addEventListener('DOMContentLoaded', () => {
-    const savedSection = localStorage.getItem('currentSection') || 'home';
-    showSection(savedSection);
-
-    // Update hash on page load
-    history.replaceState(null, null, `#${savedSection}`);
-});
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -168,21 +226,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
 });
 
-// About Us
-document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        threshold: 0.2
-    };
+// // About Us
+// document.addEventListener('DOMContentLoaded', () => {
+//     const observerOptions = {
+//         threshold: 0.2
+//     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
-            }
-        });
-    }, observerOptions);
+//     const observer = new IntersectionObserver((entries) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('appear');
+//             }
+//         });
+//     }, observerOptions);
 
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach(el => observer.observe(el));
+//     const fadeElements = document.querySelectorAll('.fade-in');
+//     fadeElements.forEach(el => observer.observe(el));
+// });
+
+
+
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    function toggleAnswer(row) {
+        const answerRow = row.nextElementSibling;
+        const arrow = row.querySelector(".arrow");
+
+        if (answerRow.style.display === "table-row") {
+            answerRow.style.display = "none";
+            arrow.style.transform = "rotate(0deg)";
+            // arrow.textContent = "▼";
+        } else {
+            answerRow.style.display = "table-row";
+            arrow.style.transform = "rotate(180deg)";
+            // arrow.textContent = "▲";
+        }
+    }
+
+    // Optional: attach event listeners instead of inline onclick
+    document.querySelectorAll(".question-row").forEach(row => {
+        row.addEventListener("click", () => toggleAnswer(row));
+    });
+});

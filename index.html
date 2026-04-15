@@ -14,41 +14,13 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lora&display=swap" rel="stylesheet">
-
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="nav-bar">
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">&#9776;</label>
-            <div class="logo">
-                <img src="/src/logo.avif" alt="FlowerKnows Logo">
-            </div>
-
-            <nav>
-                <a href="#home" id="home-link">home</a>
-                <a href="#about" id="about-link">about</a>
-                <a href="#categories" id="categories-link">category</a>
-                <a href="#contact">contact</a>
-            </nav>
-
-            <div class="right-nav">
-                <a><i class="fas fa-search"></i></a>
-                <a><i class="fas fa-user"></i></a>
-                <a><i class="fas fa-shopping-bag"></i></a>
-            </div>
-        </div>
-    </header>
-
+    <header id="main-header"></header>
     <main>
-        <section id="home">
-            <div class="hero-section">
+        <section id="hero-section">
                 <div class="slideshow">
                     <img src="/src/additional-images/hero1.webp" class="slideshow-img" alt="Easter collection banner">
                     <div class="slide-text grid">
@@ -63,7 +35,7 @@
                     <div class="slide-text grid">
                         <h1>Into a Bunny Dream</h1>
                         <p>Discover your favorites with Bunny Dream</p>
-                        <a href="#categories" class="btn btn-secondary" aria-label="View all products in the Sale collection">Shop Now</a>
+                        <a href="categories.html" class="btn btn-secondary" aria-label="View all products in the Sale collection">Shop Now</a>
                     </div>
                 </div>
 
@@ -77,122 +49,172 @@
                 </div>
                 <button class="slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="slide-button-right" onclick="plusDivs(1)">&#10095;</button>
-            </div>
-
-            <div class="buy-collection">
-
-            </div>
-            <div class="community">
-
-            </div>
-
-            <div></div>
-
         </section>
 
-        <section id="about" class="section-hidden">
-    
-            <div class="container section-padding">
-                <div class="split-layout">
-                    <div class="media-column">
-                        <img src="src/additional-images/butterfly_cloud_collar_collection.webp" alt="Flower Knows Collection" class="rounded-img shadow">
-                    </div>
-                    <div class="text-column">
-                        <h2 class="section-title">About Us</h2>
-                        <p>At Flower Knows, we believe that makeup is more than just a routine, it is a portal to a dreamscape. Founded in 2016, we have dedicated ourselves to merging the ethereal charm of European Rococo elegance with the innovative spirit of C-Beauty.</p>
-                        <p>We don't just create cosmetics; we craft artifacts for your vanity. Every collection is an immersive narrative, inviting you to step into a world of celestial angels, enchanted forests, and vintage toy theaters.</p>
-                    </div>
+
+        <!-- Strawberry Section -->
+        <section class="grid grid-2 section-padding">
+            <!-- LEFT BIG IMAGE -->
+            <div class="left-box">
+                <img src="/src/additional-images/strawberry_cupid_collection.webp" alt="Strawberry Sweet Set">
+                <div class="overlay-text">
+                    <h1 class="section-title">Strawberry Sweet Set</h1>
+                    <p>Limited Edition Collection</p>
                 </div>
             </div>
 
-            <div class="highlight-block">
-                <div class="container section-padding">
-                    <div class="grid grid-2">
-                        <div class="text-column">
-                            <h2 class="section-title">Our Vision</h2>
-                            <div class="feature-list">
-                                <div class="feature-item">
-                                    <h4>Intricate Craftsmanship</h4>
-                                    <p>Our signature 3D engraved palettes bring art to your fingertips.</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h4>Whimsical Storytelling</h4>
-                                    <p>From Swan Ballet to Moonlight Mermaid, we create worlds, not just products.</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h4>Inclusive Radiance</h4>
-                                    <p>We curate soft, dream-like colour stories for every beauty lover.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media-column fade-in">
-                            <img src="/src/additional-images/our_vision.webp" alt="Our Vision" class="rounded-img shadow">
-                        </div>
+            <!-- RIGHT SMALL BOXES -->
+            <div class="grid grid-2 right-box">
+                <div class="item">
+                    <div class="item-text">
+                        <h3>Strawberry Lip Set</h3>
+                        <p>Creamy Strawberry Trio Lip Set</p>
                     </div>
+                    <img src="/src/additional-images/strawberryLipSet.png" alt="Strawberry Lip Set">
                 </div>
-            </div>
 
-            <div class="container section-padding">
-                <h2 class="section-title text-center">Our Signature Series</h2>
-                <div class="grid grid-3">
-                    <article class="content-card shadow">
-                        <div class="card-image">
-                            <img src="/src/additional-images/bunny_garden.webp" alt="Bunny Garden">
-                        </div>
-                        <div class="card-body">
-                            <h4>Bunny Garden</h4>
-                            <p>A whimsical springtime inspired series capturing the essence of nature.</p>
-                        </div>
-                    </article>
 
-                    <article class="content-card shadow">
-                        <div class="card-image">
-                            <img src="/src/additional-images/strawberry_rococo.webp" alt="Strawberry Rococo">
-                        </div>
-                        <div class="card-body">
-                            <h4>Strawberry Rococo</h4>
-                            <p>A sweet vintage inspired collection merging dessert aesthetics with elegance.</p>
-                        </div>
-                    </article>
+                <div class="item">
+                    <div class="item-text">
+                        <h3>Strawberry Make Up Set</h3>
+                        <p>Strawberry Cupid Essential Set</p>
+                    </div>
+                    <img src="/src/additional-images/strawberrySet.png" alt="Strawberry Make Up Set">
+                </div>
 
-                    <article class="content-card shadow">
-                        <div class="card-image">
-                            <img src="/src/additional-images/the_sweetie_bear_collection.webp" alt="Sweetie Bear">
-                        </div>
-                        <div class="card-body">
-                            <h4>The Sweetie Bear</h4>
-                            <p>This collection captures cozy warmth and nostalgic childhood joy.</p>
-                        </div>
-                    </article>
+                <div class="item">
+                    <div class="item-text">
+                        <h3>Strawberry Gift Box</h3>
+                        <p>Perfect for gifting</p>
+                    </div>
+                    <img src="/src/additional-images/strawberrySet1.png" alt="Strawberry Gift Box">
+                </div>
+
+                <div class="item">
+                    <div class="item-text">
+                        <h3>Gift Lip Set</h3>
+                        <p>Scented Cupid Set</p>
+                    </div>
+                    <img src="/src/additional-images/lipScent.png" alt="Gift Lip Set">
                 </div>
             </div>
         </section>
 
-
-
-        <section id="categories" class="section-hidden">
-            <div class="category-bar">
-                <button id="cat-all" class="active btn category-button">All</button>
-                <button id="cat-face" class="btn category-button">Face</button>
-                <button id="cat-eyes" class="btn category-button">Eyes</button>
-                <button id="cat-lips" class="btn category-button">Lips</button>
-                <button id="cat-accessories" class="btn category-button">Accessories & Applicators</button>
+        <!-- REWARD SECTION -->
+        <section class="grid grid-2 section section-highlight">
+            <img src="/src/additional-images/reward.png" alt="Flower Knows Reward">
+            <div class="section-content">
+                <p class="section-small-title">JOIN WITH 100 POINTS</p>
+                <h2>Get Rewarded While You Shop</h2>
+                <a href="#" class="btn btn-primary">JOIN NOW</a>
             </div>
-            <h2 id="category-title" class="text-center">All</h2>
-            <div id="product-list" class="grid grid-4"></div>
         </section>
+
+        <!-- EASTER SALE -->
+        <section class="container section-padding text-center">
+            <div>
+                <h1>Easter Sale</h1>
+                <p>GRAB YOUR FAVORITES BEFORE THEY'RE GONE!</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="product-card">
+                    <img src="/src/additional-images/BlueSet.png" alt="Blue Set">
+                    <h3>Robin Egg Set</h3>
+                    <p class="price">
+                        <span class="old">$216.00</span>
+                        <span class="new">$119.00</span>
+                    </p>
+                    <div class="badge">46% OFF</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/src/additional-images/MakeUpSet.png" alt="Make up set">
+                    <h3>Surprise Gift Set</h3>
+                    <p class="price">
+                        <span class="old">$60.00</span>
+                        <span class="new">$29.00</span>
+                    </p>
+                    <div class="badge">52% OFF</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/src/additional-images/CutePink.png" alt="cute pink set">
+                    <h3>Soft Sculpt Set</h3>
+                    <p class="price">
+                        <span class="old">$156.00</span>
+                        <span class="new">$85.00</span>
+                    </p>
+                    <div class="badge">55% OFF</div>
+                </div>
+
+                <div class="product-card">
+
+                    <img src="/src/additional-images/Berry.png" alt="Jewelry">
+                    <h3>Berry Enchanted Garden Set</h3>
+                    <p class="product-price">
+                        <span class="old">$101.00</span>
+                        <span class="new">$55.00</span>
+                    </p>
+                    <div class="badge">55% OFF</div>
+                </div>
+
+            </div>
+        </section>
+
         
-        <section id="contact" class="section-hidden">
+        <section class="section-community section section-highlight">
+            <div class="grid grid-2">
+                <img src="/src/additional-images/community.webp" alt="community pic">
+                <div class="section-content">
+                    <p class="section-small-title">Join the Flower Knows Community</p>
+                    <h2>Connections and Exclusive Events Await - Let's Celebrate Beauty Together!</h2> 
+                    <button class="btn btn-primary">join our community</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-collection section-padding">
+
+            <h1 class="text-center">Explore Previous Collections</h1>
+
+            <div class="container grid grid-4">
+                <div class="collection-item">
+                    <img src="src/additional-images/butterfly_cloud_collar_collection.webp" alt="collection1" class="section-img">
+                    <p class="collection-title">The Sweetie Bear Collection</p>
+                </div>
+
+                <div class="collection-item">
+                    <img src="/src/explore_collection/pic2.webp" alt="collection2" class="section-img">
+                    <p class="collection-title">The Sweetie Bear Collection</p>
+                </div>
+
+                <div class="collection-item">
+                    <img src="/src/explore_collection/pic3.webp" alt="collection3" class="section-img">
+                    <p class="collection-title">The Sweetie Bear Collection</p>
+                </div>
+
+                <div class="collection-item">
+                    <img src="/src/explore_collection/pic4.webp" alt="collection4" class="section-img">
+                    <p class="collection-title">The Sweetie Bear Collection</p>
+                </div>
+            </div>
+
+            <div class="brand-pic section-padding text-center">
+                <img src="/src/additional-images/vogue.webp" alt="Vogue">
+                <img src="/src/additional-images/Elle-2.webp" alt="Elle">
+                <img src="/src/additional-images/Daily_Mail.webp" alt="Daily Mail">
+                <img src="/src/additional-images/Beauty_Independent.png" alt="Beauty Independent">
+                <img src="/src/additional-images/US_Weekly.webp" alt="US Weekly">
+                <img src="/src/additional-images/teen_vogue.avif" alt="Teen Vogue">
+            </div>
 
         </section>
-    
     </main>
 
-    <footer>
+    <footer id="main-footer" class="footer"></footer>
 
-    </footer>
-
-<script type="module" src="script.js"></script>
+    <script type="module" src="script.js"></script>
 
 </body>
 </html>
