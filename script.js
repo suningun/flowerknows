@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryButtons = document.querySelectorAll('.category-bar button');
     const container = document.getElementById('product-list');
     const categoryTitle = document.getElementById('category-title');
+    const stars = '<i class="fas fa-star"></i>'.repeat(5);
 
     function renderProducts(filteredProducts, categoryName) {
         categoryTitle.textContent = categoryName;
@@ -163,11 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
 
-                    <img src="${product.img}" alt="${product.name}">
-                <h3 class="product-title underline">${product.name}</h3>
-                <p class="product-price">$${product.price.toFixed(2)}</p>
-                <button class="btn btn-primary add-to-cart" data-id="${product.id}">Add to Cart</button>
-            `;
+                <div class="hover-effect">
+                            <img src="${product.img}" alt="${product.name}">
+                            <button class="btn btn-primary add-to-cart hover-button" data-id="${product.id}">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="product-title underline">${product.name}</h3>
+                        <p class="product-price">$${product.price.toFixed(2)}</p>
+                        <p class="stars">${stars}</p>
+                    `;
 
             container.appendChild(card);
         });
