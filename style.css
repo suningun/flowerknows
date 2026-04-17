@@ -161,7 +161,7 @@ video {
     margin-bottom: 15px;
 }
 
-/* 1. Image Zoom */
+
 .hover-effect img {
     width: 100%;
     display: block;
@@ -169,7 +169,7 @@ video {
 }
 
 .hover-effect:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* 2. Slide-up Button */
@@ -253,7 +253,7 @@ nav a:hover { text-decoration: underline var(--primary-color) 1px; text-underlin
 .product-title {font-weight: normal; font-size: var(--font-base); margin: var(--space-sm) 0; min-height: 40px; line-height: 20px; }
 .product-price { font-family: var(--secondary-font); font-size: var(--font-md); font-weight: 300; margin: var(--space-sm) 0; min-height: 20px;}
 .product-card { position: relative; background: var(--card-bg); padding: var(--card-padding); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-.product-card img { position: relative;  width: 100%; height: 300px; object-fit: cover;}
+.product-card img { position: relative;  width: 100%; height: auto; object-fit: cover;}
 
 
 
@@ -288,7 +288,7 @@ nav a:hover { text-decoration: underline var(--primary-color) 1px; text-underlin
 .section-content h2 { font-size: var(--font-xl); font-weight: 400; margin-bottom: 35px; line-height: 1.3; }
 .section-paragraph { line-height: 1.8; }
 
-.section-img { width: 100%; display: block; object-fit: cover; }
+.section-img { width: 100%; display: block; object-fit: cover; height: 75%;}
 
 .left-box { position: relative; min-height: 500px; overflow: hidden; }
 .left-box img { width: 100%; height: 100%; object-fit: cover; display: block;}
@@ -303,7 +303,7 @@ nav a:hover { text-decoration: underline var(--primary-color) 1px; text-underlin
 .item img { width: 70%; margin: 20px auto 0; object-fit: contain; display: block; }
 
 .collection-item { text-align: center; justify-content: center;}
-.collection-title { margin-top: var(--space-sm); font-size: var(--font-md);}
+
 
 /* ================= BRAND ================= */
 .brand-pic { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: var(--space-xl);}

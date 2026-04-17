@@ -39,7 +39,7 @@ let products = [
     { id: 34, img: "/src/products/ID34.webp", name: "Shell's Jewel Hand Mirror", price: 25, category: "Accessories & Applicators" },
 ];
 
-
+//HEADER
 const createHeader = () => {
     const header = document.getElementById('main-header');
 
@@ -69,6 +69,7 @@ const createHeader = () => {
 };
 createHeader();
 
+//FOOTER
 const createFooter = () => {
     const footer = document.getElementById('main-footer');
 
@@ -140,7 +141,7 @@ const createFooter = () => {
 createFooter();
 
 
-
+//CATEGORIES FILTHER
 const categoryMap = {
     'cat-all': 'All',
     'cat-face': 'Face',
@@ -165,14 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
 
                 <div class="hover-effect">
-                            <img src="${product.img}" alt="${product.name}">
-                            <button class="btn btn-primary add-to-cart hover-button" data-id="${product.id}">
-                                Add to Cart
-                            </button>
-                        </div>
-                        <h3 class="product-title underline">${product.name}</h3>
-                        <p class="product-price">$${product.price.toFixed(2)}</p>
-                        <p class="stars">${stars}</p>
+                    <img src="${product.img}" alt="${product.name}">
+                    <button class="btn btn-primary add-to-cart hover-button" data-id="${product.id}">
+                        Add to Cart
+                    </button>
+                </div>
+                <h3 class="product-title underline">${product.name}</h3>
+                <p class="product-price">$${product.price.toFixed(2)}</p>
+                <p class="stars">${stars}</p>
                     `;
 
             container.appendChild(card);
@@ -202,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts(products, 'All');
 });
 
-
+//CONTROL SLIDESHOW
 
 document.addEventListener("DOMContentLoaded", () => {
     let slideIndex = 0;
@@ -232,32 +233,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
 });
 
-// // About Us
-// document.addEventListener('DOMContentLoaded', () => {
-//     const observerOptions = {
-//         threshold: 0.2
-//     };
 
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.classList.add('appear');
-//             }
-//         });
-//     }, observerOptions);
-
-//     const fadeElements = document.querySelectorAll('.fade-in');
-//     fadeElements.forEach(el => observer.observe(el));
-// });
-
-
-
+//FOR NAVIGATION BAR WHEN SMALL SCREEN
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('show');
 });
+
+//For TABLE CLICK
 
 document.addEventListener("DOMContentLoaded", () => {
     function toggleAnswer(row) {
