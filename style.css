@@ -649,7 +649,7 @@ td { padding: 15px var(--space-md); word-break: break-word; }
         --padding-y: 90px;
         --space-xl: 44px;
     }
-}
+
 
 /* --- Landscape Orientation (Mobile in Landscape) --- */
 @media (max-height: 600px) and (orientation: landscape) {
@@ -657,5 +657,4 @@ td { padding: 15px var(--space-md); word-break: break-word; }
     .navbar-height { height: 60px; }
     .hero-section { height: 80vh; }
     .slide-text { top: 50%; }
-}
-
+}}
