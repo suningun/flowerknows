@@ -253,7 +253,7 @@ const createHeader = () => {
                 <i class="fas fa-bars"></i>
             </button>
             <div class="logo">
-                <img src="/src/logo.avif" alt="FlowerKnows Logo">
+                <img src="src/logo.avif" alt="FlowerKnows Logo">
             </div>
 
             <nav>
