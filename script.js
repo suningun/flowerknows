@@ -289,46 +289,46 @@ const createFooter = () => {
             <li class="footer-column">
                 <h3>ABOUT FLOWER KNOWS</h3>
                 <ul>
-                    <li><a href="#">Loyalty Program</a></li>
-                    <li><a href="#">Brand Story</a></li>
-                    <li><a href="#">Affiliate Program</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Become a Retailer</a></li>
+                    <li><a href="#" target="_blank">Loyalty Program</a></li>
+                    <li><a href="#" target="_blank">Brand Story</a></li>
+                    <li><a href="#" target="_blank">Affiliate Program</a></li>
+                    <li><a href="#" target="_blank">Blog</a></li>
+                    <li><a href="#" target="_blank">Community</a></li>
+                    <li><a href="#" target="_blank">Become a Retailer</a></li>
                 </ul>
             </li>
 
             <li class="footer-column">
                 <h3>CUSTOMER CARE</h3>
                 <ul>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Refund & Return Policy</a></li>
-                    <li><a href="#">Promotion Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#" target="_blank">Shipping Policy</a></li>
+                    <li><a href="#" target="_blank">Refund & Return Policy</a></li>
+                    <li><a href="#" target="_blank">Promotion Terms & Conditions</a></li>
+                    <li><a href="#" target="_blank">Privacy Policy</a></li>
+                    <li><a href="#" target="_blank">Terms and Conditions</a></li>
                 </ul>
             </li>
 
             <li class="footer-column">
                 <h3>CUSTOMER SERVICE</h3>
                 <ul>
-                    <li><a href="#">Student Discount</a></li>
-                    <li><a href="#">Track Your Order</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Submit a Fake</a></li>
+                    <li><a href="#" target="_blank">Student Discount</a></li>
+                    <li><a href="#" target="_blank">Track Your Order</a></li>
+                    <li><a href="#" target="_blank">FAQ</a></li>
+                    <li><a href="#" target="_blank">Contact Us</a></li>
+                    <li><a href="#" target="_blank">Submit a Fake</a></li>
                 </ul>
             </li>
 
             <li class="footer-column">
                 <h3>FOLLOW US</h3>
                 <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </li>
         </ul>
