@@ -257,7 +257,7 @@ const createHeader = () => {
             </div>
 
             <nav>
-                <a href="/">home</a>
+                <a href="index.html">home</a>
                 <a href="about.html">about</a>
                 <a href="categories.html">category</a>
                 <a href="contact.html">contact</a>
