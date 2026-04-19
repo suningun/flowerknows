@@ -718,6 +718,7 @@ td {
 
         --grid-4-cols: repeat(2, 1fr);
         --grid-3-cols: repeat(2, 1fr);
+        --grid-2-cols: 1fr;
         --hero-title-size: var(--font-xl);
         --slide-button-size: 20px;
     }
@@ -726,8 +727,14 @@ td {
       /* layout */
     .split-layout { flex-direction: column; text-align: center; gap: var(--space-lg);}
     
-    /* responsive element sizing */
-    .item { min-height: 380px; }
+
+    .item {
+        margin: 0 auto;
+    }
+
+    .item img {
+        width: 60%;
+    }
     .brand-pic img { width: var(--brand-logo-width); }
     
     /* button responsiveness */
