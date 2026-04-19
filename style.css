@@ -110,7 +110,7 @@ h3 { font-size: var(--font-md); margin: 12px 0; line-height: var(--line-height-n
 .grid-2 { grid-template-columns: var(--grid-2-cols); }
 
 /* --- Layout Components --- */
-.split-layout { display: flex; align-items: center; gap: var(--space-xl); }
+.split-layout { display: flex; align-items: center; gap: var(--space-xl); padding: 0 var(--space-lg); }
 
 video {
     width: 100%;
@@ -698,6 +698,7 @@ td {
 
 /* ================= RESPONSIVE SYSTEM ================= */
 
+
 /* --- Large Tablets & Small Laptops --- */
 @media (max-width: 1024px) {
     :root {
@@ -725,7 +726,7 @@ td {
 
     .container { max-width: 95%; }
       /* layout */
-    .split-layout { flex-direction: column; text-align: center; gap: var(--space-lg);}
+    .split-layout { flex-direction: column; text-align: center; gap: var(--space-lg); padding: 0 var(--space-md); }
     
 
 
@@ -895,6 +896,9 @@ td {
 
     /* reduce gaps */
     .flex { flex-direction: column; }
+    
+    /* split layout mobile padding */
+    .split-layout { padding: 0 var(--space-sm); gap: var(--space-md); }
     
     /* responsive element sizing */
     .item { padding: var(--space-md); }

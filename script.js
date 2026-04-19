@@ -415,6 +415,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let slideIndex = 0;
   const slides = document.querySelectorAll(".slideshow");
 
+  if (slides.length === 0) {
+    console.warn("No slideshow elements found");
+    return;
+  }
+
   function showSlide(n) {
     if (n >= slides.length) slideIndex = 0;
     if (n < 0) slideIndex = slides.length - 1;
