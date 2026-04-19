@@ -253,7 +253,7 @@ const createHeader = () => {
                 <i class="fas fa-bars"></i>
             </button>
             <div class="logo">
-                <img src="src/logo.avif" alt="FlowerKnows Logo">
+                <img src="/src/logo.avif" alt="FlowerKnows Logo">
             </div>
 
             <nav>
@@ -281,7 +281,7 @@ const createFooter = () => {
 
         <ul class="footer-page">
             <li>
-                <img src="src/additional-images/live_your_fairytale.webp" alt="live with fary Tale">
+                <img src="/src/additional-images/live_your_fairytale.webp" alt="live with fary Tale">
             </li>
         </ul>
 
