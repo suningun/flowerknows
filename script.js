@@ -281,7 +281,7 @@ const createFooter = () => {
 
         <ul class="footer-page">
             <li>
-                <img src="/src/additional-images/live_your_fairytale.webp" alt="live with fary Tale">
+                <img src="src/additional-images/live_your_fairytale.webp" alt="live with fary Tale">
             </li>
         </ul>
 
@@ -357,6 +357,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("product-list");
   const categoryTitle = document.getElementById("category-title");
   const stars = '<i class="fas fa-star"></i>'.repeat(5);
+
+  // Only run product rendering if elements exist (categories page)
+  if (!container || !categoryTitle) return;
 
   function renderProducts(filteredProducts, categoryName) {
     categoryTitle.textContent = categoryName;
