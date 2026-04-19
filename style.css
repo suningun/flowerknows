@@ -464,7 +464,7 @@ nav a:hover { text-decoration: underline var(--primary-color) 1px; text-underlin
     background: var(--secondary-color);
     border: 1px solid var(--primary-color);
     min-height: var(--item-min-height);
-    padding: var(--space-lg);
+    padding: var(--space-md);
 }
 
 .item-text {
@@ -476,7 +476,7 @@ nav a:hover { text-decoration: underline var(--primary-color) 1px; text-underlin
 }
 
 .item img {
-    width: 70%;
+    width: 90%;
     margin: 20px auto 0;
     object-fit: contain;
     display: block;
@@ -718,7 +718,7 @@ td {
 
         --grid-4-cols: repeat(2, 1fr);
         --grid-3-cols: repeat(2, 1fr);
-        --grid-2-cols: 1fr;
+        /* --grid-2-cols: 1fr; */
         --hero-title-size: var(--font-xl);
         --slide-button-size: 20px;
     }
@@ -728,13 +728,8 @@ td {
     .split-layout { flex-direction: column; text-align: center; gap: var(--space-lg);}
     
 
-    .item {
-        margin: 0 auto;
-    }
 
-    .item img {
-        width: 60%;
-    }
+
     .brand-pic img { width: var(--brand-logo-width); }
     
     /* button responsiveness */
@@ -787,6 +782,7 @@ td {
 
         --hero-title-size: 26px;
         --slide-button-size: 16px;
+        --item-min-height: 300px;
     }
 
     nav {
@@ -815,7 +811,7 @@ td {
     .grid { gap: var(--space-md); }
     
     /* responsive element sizing */
-    .item { min-height: 360px; }
+
     .left-box { min-height: 400px; }
     .brand-pic img { width: 100px; }
     
@@ -886,7 +882,7 @@ td {
         --hero-title-size: 28px;
         
         --slide-button-size: 20px;
-        --item-min-height: 300px;
+        --item-min-height: 200px;
         --box-min-height: 350px;
         --brand-logo-width: 80px;
 
